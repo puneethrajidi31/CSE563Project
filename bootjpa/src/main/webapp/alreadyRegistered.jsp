@@ -8,6 +8,7 @@
 <body>
     <div class="text-center">
     <label><b><h1>You have already registered with this mailId!! Please try again!!</h1></b></label>
+    <form> <a href="home.jsp">Login</a></form><br><br>
     </div>
 </body>
 </html>

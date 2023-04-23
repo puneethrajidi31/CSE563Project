@@ -24,6 +24,9 @@
     </div>
   </div>
 </form>
+<div class="text-center">
+<form> <a href="home.jsp">Signup</a></form><br><br>
+</div>
 </div>
 </body>
 </html>

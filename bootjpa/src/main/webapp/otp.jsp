@@ -16,6 +16,7 @@
 
     <button type="submit" class="signupbtn">Submit</button><br><br>
 </form>
+<form> <a href="home.jsp">Login</a></form><br><br>
 </div>
 </body>
 </html>

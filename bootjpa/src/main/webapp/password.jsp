@@ -1,5 +1,3 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,9 +7,9 @@
 </head>
 <body>
     <div class="text-center">
-    <label><b>Incorrect username/password.Please try again!!</b></label>
+    <p><b><h3>Passwords didn't Match or Password didn't follow the Convention</h3></b></p>
+    <p><b><h3>Password should be in 6-12 characters</h3></b></p>
     <form> <a href="home.jsp">Login</a></form><br><br>
-    
-</div>
+    </div>
 </body>
 </html>

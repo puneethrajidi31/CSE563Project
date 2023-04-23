@@ -70,7 +70,7 @@ public ModelAndView ModifyTimeSlot(Timeentry timeentry)
 	boolean y=database.existsById(x);
 	if(y==false)
 	{
-		ModelAndView mvEmp=new ModelAndView("error.jsp");
+		ModelAndView mvEmp=new ModelAndView("Nodata.jsp");
 		return mvEmp;
 	}
 	Timeentry c=database.findById(x).get();
@@ -91,7 +91,7 @@ public ModelAndView DeleteTimeSlot(Timeentry timeentry)
 	boolean y=database.existsById(x);
 	if(y==false)
 	{
-		ModelAndView mvEmp=new ModelAndView("error.jsp");
+		ModelAndView mvEmp=new ModelAndView("Nodata.jsp");
 		return mvEmp;
 	}
 	database.deleteById(x);
@@ -140,6 +140,20 @@ public ModelAndView displayentries()
 		return new ModelAndView("Nodata.jsp");
 	}
 	mvRecords.addObject("records", q);
+	return mvRecords;
+}
+
+@RequestMapping("/fetchadminrecords")
+public ModelAndView displayadminentries()
+{
+	ModelAndView mvRecords=new ModelAndView("Showrecords.jsp");
+	List<Timeentry>p=database.findAll();
+	//List<Timeentry>q=p.stream().filter(x->x.getUsername().equals(customerid)).collect(Collectors.toList());
+	if(p.size()==0)
+	{
+		return new ModelAndView("Nodata.jsp");
+	}
+	mvRecords.addObject("records", p);
 	return mvRecords;
 }
 
@@ -213,6 +227,7 @@ public ModelAndView loginUser(User val)
 	}
 	return mvError;
 }
+
 @RequestMapping("/")
 public ModelAndView home()
 {
@@ -228,14 +243,14 @@ public ModelAndView addUser(User alien)
 		  if(alien.getEmailId().equals(user.getEmailId()))
 			  return xa;
 	    }
-		if(alien.getPassword().equals(alien.getReEnteredPassword())){
-		repo.save(alien);
-		ModelAndView xb=new ModelAndView("login.jsp");
-		return xb;}
-		else {
-		ModelAndView xc=new ModelAndView("Errorhandling");
+		if(alien.getPassword().equals(alien.getReEnteredPassword())==false || alien.getPassword().length()>12 || alien.getPassword().length()<6)
+		{
+		ModelAndView xc=new ModelAndView("password.jsp");
 	    return xc;
 	    }
+			repo.save(alien);
+			ModelAndView xb=new ModelAndView("login.jsp");
+			return xb;
 }
 
 

@@ -1,5 +1,3 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,9 +7,10 @@
 </head>
 <body>
     <div class="text-center">
-    <label><b>Incorrect username/password.Please try again!!</b></label>
+    <label><b><h3>No Data Available</h3></b></label>
+    <form> <a href="welcomeEmployee.jsp">Employee Home</a></form><br><br>
     <form> <a href="home.jsp">Login</a></form><br><br>
     
-</div>
+    </div>
 </body>
 </html>

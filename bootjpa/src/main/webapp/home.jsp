@@ -20,6 +20,7 @@
     <input type="text" placeholder="Enter Email" name="emailId" required><br><br>
 
     <label for="psw"><b>Password:</b></label>
+    <p>Password should be in 6-12 Characters</p>
     <input type="password" placeholder="Enter Password" name="password" required><br><br>
 
     <label for="psw-repeat"><b>Re-enter Password:</b></label>
