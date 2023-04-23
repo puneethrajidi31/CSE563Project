@@ -79,7 +79,7 @@ public ModelAndView ModifyTimeSlot(Timeentry timeentry)
 	c.setLifecyclestep(timeentry.getLifecyclestep());
 	c.setEffortcategory(timeentry.getEffortcategory());
 	database.save(c);
-	ModelAndView mvEmp=new ModelAndView("Showrecords.jsp");
+	ModelAndView mvEmp=new ModelAndView("welcomeEmployee.jsp");
 	return mvEmp;
 	
 }
@@ -95,7 +95,7 @@ public ModelAndView DeleteTimeSlot(Timeentry timeentry)
 		return mvEmp;
 	}
 	database.deleteById(x);
-	ModelAndView mvEmp=new ModelAndView("Showrecords.jsp");
+	ModelAndView mvEmp=new ModelAndView("welcomeEmployee.jsp");
 	return mvEmp;
 	
 }
@@ -237,7 +237,6 @@ public ModelAndView addUser(User alien)
 	    return xc;
 	    }
 }
-
 
 
 }

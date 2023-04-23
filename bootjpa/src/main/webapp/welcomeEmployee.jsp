@@ -39,6 +39,8 @@
     </form>
     <label>Check the saved Logs over here</label>
     <form><a href="http://localhost:8080/fetchrecords">Fetch Records</a></form><br><br>
+    <form> <a href="ModifyLogs.jsp">Modify Records</a></form><br><br>
+      <form> <a href="DeleteLogs.jsp">Delete Records</a></form><br><br>
     </div>
 </body>
 </html>
