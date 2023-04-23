@@ -1,12 +1,8 @@
 
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
-
-    <p>${records[0].id}</p>
-    <p>${records[0].projectname}</p>
-    <c:forEach items="${records}" var="item">
-        <p><h1>${item}<br></h1></p>
-    </c:forEach>    
+    
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -28,12 +24,19 @@
                 <th>Plan</th>
                 <th>Start Date</th>
                 <th>End Date</th>
-                <th>Acceptance</th>
+                
               </tr>
             </thead>
               <c:forEach items="${records}" var="record">
                 <tr>
                     <td>${record.id}</td>
+                    <td>${record.projectname}</td>
+                    <td>${record.lifecyclestep}</td>
+                    <td>${record.effortcategory}</td>
+                    <td>${record.plan}</td>
+                    <td>${record.startdate}</td>
+                    <td>${record.enddate}</td>
+                    
                 </tr>
               </c:forEach>
           </table>

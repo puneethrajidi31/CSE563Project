@@ -21,6 +21,7 @@ private String plan;
 private Date startdate;
 private Date enddate;
 private String acceptance;
+private String username;
 
 
 public Timeentry() {
@@ -31,8 +32,12 @@ public Timeentry() {
 
 
 
+
+
+
+
 public Timeentry(Long id, String projectname, String lifecyclestep, String effortcategory, String plan, Date startdate,
-		Date enddate, String acceptance) {
+		Date enddate, String acceptance, String username) {
 	super();
 	this.id = id;
 	this.projectname = projectname;
@@ -42,10 +47,24 @@ public Timeentry(Long id, String projectname, String lifecyclestep, String effor
 	this.startdate = startdate;
 	this.enddate = enddate;
 	this.acceptance = acceptance;
+	this.username = username;
 }
 
 
 
+public String getUsername() {
+	return username;
+}
+
+
+public void setUsername(String username) {
+	this.username = username;
+}
+
+
+public String getAcceptance() {
+	return acceptance;
+}
 
 
 public Long getId() {
@@ -116,9 +135,6 @@ public Date getEnddate() {
 public void setEnddate(Date enddate) {
 	this.enddate = enddate;
 }
-
-
-
 
 
 public String isAcceptance() {

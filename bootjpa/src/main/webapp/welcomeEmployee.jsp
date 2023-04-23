@@ -11,7 +11,7 @@
     <form action="endtimer">
     <select name="projectname" id="projectname">
           <option value="Project1">Project1</option>
-          <option value="Project1">Project2</option>
+          <option value="Project2">Project2</option>
         </select><br><br>
     <select name="lifecyclestep" id="lifecyclestep">
               <option value="lifecyclestep1">lifecyclestep1</option>
