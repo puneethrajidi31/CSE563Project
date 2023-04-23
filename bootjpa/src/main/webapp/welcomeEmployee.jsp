@@ -3,10 +3,12 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Employee</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 </head>
 <body>
-    <label><b>WELCOME EMPLOYEE!!</b></label>
-    <label>Click START button before the beginning of the task and click STOP button after it is done!!</label>
+  <div class="text-center">
+    <p><b>WELCOME EMPLOYEE!!</b></p>
+    <p>Click START button before the beginning of the task and click STOP button after it is done!!</p>
     <form action="starttimer"> <button type="submit" class="signupbtn">START the timer</button></form><br><br>
     <form action="endtimer">
     <select name="projectname" id="projectname">
@@ -37,5 +39,6 @@
     </form>
     <label>Check the saved Logs over here</label>
     <form><a href="http://localhost:8080/fetchrecords">Fetch Records</a></form><br><br>
+    </div>
 </body>
 </html>

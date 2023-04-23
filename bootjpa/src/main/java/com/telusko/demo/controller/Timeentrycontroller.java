@@ -135,6 +135,10 @@ public ModelAndView displayentries()
 	ModelAndView mvRecords=new ModelAndView("Showrecords.jsp");
 	List<Timeentry>p=database.findAll();
 	List<Timeentry>q=p.stream().filter(x->x.getUsername().equals(customerid)).collect(Collectors.toList());
+	if(q.size()==0)
+	{
+		return new ModelAndView("Nodata.jsp");
+	}
 	mvRecords.addObject("records", q);
 	return mvRecords;
 }
