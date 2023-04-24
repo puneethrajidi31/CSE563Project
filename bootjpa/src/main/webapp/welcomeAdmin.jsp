@@ -11,7 +11,7 @@
     <div class="text-center">
     <p><b>WELCOME ADMIN!!</b></p>
     <p>Click to fetch the timesheets of employees!!!</p>
-    <form><a href="http://localhost:8080/fetchadminrecords">Fetch Records</a></form><br><br>
+    <form><a href="http://localhost:8080/fetchadminrecords">Fetch All Records</a></form><br><br>
     <form> <a href="home.jsp">Login</a></form><br><br>
     </div>
 
